@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Car Specs Tool</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        }
+
+        .container input[type="text"] {
+            background: linear-gradient(to bottom, #f8d038 0%,#f5ca2e 100%);
+            padding: .25em 1em .25em 1.75em;
+            font-weight: bold;
+            font-size: 2em;
+            border-radius: 5px;
+            border: 1px solid #000;
+            position: relative;
+            font-family: helvetica, ariel, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .container input[type="text"]:before {
+            content: 'GB';
+            display: block;
+            width: 30px;
+            height: 100%;
+            background: #063298;
+            position: absolute;
+            top: 0;
+            border-radius: 5px 0 0 5px;
+            color: #f8d038;
+            font-size: .5em;
+            line-height: 85px;
+            padding-left: 5px;
+        }
+
+        .container input[type="text"]:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 30px;
+            border: 1px dashed #f8d038;
+        }
+
+        input[type='submit'] {
+            display:inline-block;
+            padding:0.35em 1.2em;
+            border:0.1em solid #FFFFFF;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.12em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            font-weight:300;
+            text-align:center;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        input[type='submit']:hover {
+            color:#000000;
+            background-color:#FFFFFF;
+        }
+
+        @media all and (max-width:30em) {
+            input[type='submit'] {
+                display:block;
+                margin:0.4em auto;
+            }
+        }
+        
+    </style>
+
+    <body>
+        <div class="container">
+            <h1 style="color: #f4f4f4; text-shadow: 1px 1px 1px black;">Enter Reg Plate</h1>
+
+            <input type="text" id="regPlate">
+            <input type="submit" id="searchBtn" value="Search">
+        </div>
+    </body>
+
+    <script src="popup.js"></script>
+
+</html>
